@@ -84,7 +84,7 @@ const App: React.FC<AppProps> = () => {
   return (
     <div className="container mx-auto py-4">
       {/* Title of the JSON Viewer */}
-      <h1 className="text-2xl font-bold text-center mb-4">JSON Viewer</h1>
+      <h1 className="text-2xl font-bold text-center mb-4">Typescript JSON Viewer</h1>
       <div className="grid place-items-center mb-4">
         {/* Input for selecting a file */}
         <input

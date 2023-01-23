@@ -8,8 +8,17 @@ const toTitleCase = (str: string) => {
     .replace(/^./, (str) => str.toUpperCase());
 };
 
+interface JSONData {
+  [key: string]: any;
+}
+
 interface DisplayJSONDataProps {
-  data: object;
+  data: JSONData;
+}
+
+
+interface DisplayJSONDataProps {
+  data: JSONData;
 }
 
 const DisplayJSONData: React.FC<DisplayJSONDataProps> = ({ data }) => {
@@ -48,13 +57,13 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = () => {
-  const [fileData, setFileData] = useState<object | null>(null);
+  const [fileData, setFileData] = useState<JSONData | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // Store the first file in the event's target files array in a variable
-    const file = event.target.files[0];
+    const file = event.target.files?.[0];
     // Check if the file's type is "application/json"
-    if (file.type === "application/json") {
+    if (file?.type === "application/json") {
       // Create a new FileReader object
       const reader = new FileReader();
       // Add an onload event listener to the reader

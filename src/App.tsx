@@ -57,7 +57,7 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = () => {
-  const [fileData, setFileData] = useState<JSONData | null>(null);
+  const [fileData, setFileData] = useState<object | null>(null);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // Store the first file in the event's target files array in a variable

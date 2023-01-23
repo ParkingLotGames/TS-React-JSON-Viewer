@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/json-bigint": "^1.0.1",
     "json-bigint": "^1.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
